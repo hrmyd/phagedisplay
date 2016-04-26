@@ -95,7 +95,7 @@ class DistMatrix:
 
         else:
             for k in regression_out_dict.keys():
-                if regression_out_dict[k][0] > k_cutoff:
+                if regression_out_dict[k][2] > k_cutoff:
                     self.seq_strings.append(k)
                     self.data_vector.append(
                                             np.array([self._alphabet_dict[s] for s in k],
